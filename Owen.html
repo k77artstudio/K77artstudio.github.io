@@ -20,6 +20,12 @@
     padding: 40px 20px;
   }
 
+  /* 🔴 LOGO STYLE */
+  .logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
   h1 {
     font-size: 28px;
     margin-bottom: 20px;
@@ -52,18 +58,21 @@
 
 <div class="container">
 
-  <!-- CHANGE NAME HERE -->
-  <h1>Listen to Your Special Message, PUT NAME HERE</h1>
+  <!-- 🔴 ADD YOUR LOGO HERE -->
+  <img src="https://i.ibb.co/JRLgxb7g/file-000000004a20720a92ce1c3feb2a2838.png" class="logo">
 
-  <!-- START BUTTON -->
+  <!-- 🔴 CHANGE CLIENT NAME HERE -->
+  <h1>Listen to Your Special Message, Mr. Owen</h1>
+
+  <!-- 🔴 START BUTTON -->
   <button onclick="startExperience()">Tap to Begin</button>
 
-  <!-- VOICE MESSAGE -->
+  <!-- 🔴 VOICE MESSAGE -->
   <audio id="voiceMessage" controls>
-    <source src="PASTE-YOUR-VOICE-LINK-HERE" type="audio/mpeg">
+    <source src="https://files.catbox.moe/g65in2.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- MESSAGE -->
+  <!-- 🔴 MESSAGE TEXT -->
   <p>
     I am because you are,<br>
     yours, Kindred Spirit.
@@ -71,9 +80,9 @@
 
 </div>
 
-<!-- BACKGROUND MUSIC -->
+<!-- 🔴 BACKGROUND MUSIC -->
 <audio id="bgMusic" loop>
-  <source src="PASTE-YOUR-MUSIC-LINK-HERE" type="audio/mpeg">
+  <source src=”https://files.catbox.moe/wwc3eu.mp3" type="audio/mpeg">
 </audio>
 
 <script>
@@ -83,6 +92,7 @@ function startExperience() {
   bg.play();
 }
 
+// Lower music when voice plays
 const bg = document.getElementById("bgMusic");
 const voice = document.getElementById("voiceMessage");
 
