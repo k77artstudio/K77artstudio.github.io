@@ -36,11 +36,17 @@
       padding: 40px 20px;
     }
 
-    .hero img {
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 0 25px rgba(255,215,0,0.3);
+    ..hero img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(255,215,0,0.4);
+  transition: 0.3s;
+}
+
+.hero img:hover {
+  transform: scale(1.03);
+}
     }
 
     .hero h2 {
@@ -106,14 +112,16 @@
 
 <section class="hero">
   <img src="https://files.catbox.moe/jgq4lb.jpg">
+  <img src="https://files.catbox.moe/x2dty8.jpg" style="margin-top:10px;">
 
   <h2>Living Frame Artwork</h2>
-  <p>Scan the QR code and experience the story behind the art.</p>
+  <p><p>
+Scan the QR code to access a private visual experience created for this artwork.
+  </p>.</p>
 
   <div class="price">₦25,000</div>
 
-  <a href="#" class="btn">Order Now</a>
-</section>
+  <a href="https://wa.me/+2349014501664" class="btn">Order on WhatsApp</a>
 
 <section class="features">
   <h3>Why This Is Different</h3>
