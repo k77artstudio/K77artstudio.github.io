@@ -1,135 +1,164 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>K77 Art Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background: #0a0a0a;
-      color: #fff;
-      text-align: center;
-    }
+<title>K77 Art Studio</title>
 
-    header {
-      padding: 20px;
-      border-bottom: 1px solid rgba(255,215,0,0.2);
-    }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0a0a;
+    color: #f2f2f2;
+}
 
-    header h1 {
-      color: gold;
-      margin: 0;
-      letter-spacing: 2px;
-    }
+header {
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 1px solid rgba(255,215,0,0.3);
+}
 
-    header p {
-      color: #ccc;
-      font-size: 14px;
-    }
+header h1 {
+    color: gold;
+    font-size: 34px;
+    letter-spacing: 2px;
+    margin: 0;
+}
 
-    .hero {
-      padding: 40px 20px;
-    }
+header p {
+    color: #aaa;
+    margin-top: 10px;
+}
 
-    .hero img {
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 0 30px rgba(255,215,0,0.3);
-    }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
 
-    h2 {
-      color: gold;
-      margin-top: 20px;
-    }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
 
-    .desc {
-      max-width: 500px;
-      margin: 10px auto;
-      color: #ccc;
-      line-height: 1.6;
+@media(min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
     }
+}
 
-    .price {
-      font-size: 28px;
-      margin: 20px 0;
-      color: gold;
-      font-weight: bold;
-    }
+.art-card {
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,215,0,0.2);
+    transition: 0.3s;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: gold;
-      color: black;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+.art-card:hover {
+    transform: scale(1.02);
+}
 
-    .gallery {
-      padding: 40px 20px;
-    }
+.art-card img {
+    width: 100%;
+    height: auto;
+}
 
-    .gallery img {
-      width: 90%;
-      max-width: 300px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
+.content {
+    padding: 15px;
+}
 
-    .gallery p {
-      color: #ccc;
-      font-size: 14px;
-    }
+.title {
+    color: gold;
+    font-size: 20px;
+}
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 12px;
-      color: #777;
-      border-top: 1px solid rgba(255,215,0,0.2);
-    }
-  </style>
+.price {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.desc {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    color: #666;
+    border-top: 1px solid rgba(255,215,0,0.2);
+}
+</style>
+
 </head>
-
 <body>
 
 <header>
-  <h1>K77 ART STUDIO</h1>
-  <p>Signature Living Frame Experience</p>
+    <h1>K77 Art Studio</h1>
+    <p>Signature Living Frame Experience</p>
 </header>
 
-<section class="hero">
-  <img src="https://files.catbox.moe/jgq4lb.jpg">
+<div class="container">
+    <div class="grid">
 
-  <h2>Living Frame Artwork</h2>
+        <!-- ART 1 -->
+        <div class="art-card">
+            <img src="https://files.catbox.moe/jgq4lb.jpg1">
+            <div class="content">
+                <div class="title">Living Frame Portrait</div>
+                <div class="price">₦170,000</div>
+                <div class="desc">A refined artistic expression crafted to bring identity and elegance into your space.</div>
+                <a class="btn" href="https://wa.me/2349014501664">Order on WhatsApp</a>
+            </div>
+        </div>
 
-  <p class="desc">
-    A refined expression of identity and presence, this piece is crafted to bring depth and character into any space. Designed with precision and finished with a premium touch.
-  </p>
+        <!-- ART 2 -->
+        <div class="art-card">
+            <img src="https://files.catbox.moe/mcuq66.jpg2">
+            <div class="content">
+                <div class="title">Abstract Essence</div>
+                <div class="price">₦150,000</div>
+                <div class="desc">A bold modern composition designed for premium interiors.</div>
+                <a class="btn" href="https://wa.me/2349014501664">Order on WhatsApp</a>
+            </div>
+        </div>
 
-  <div class="price">₦170,000</div>
+        <!-- ART 3 -->
+        <div class="art-card">
+            <img src="PASTE_IMAGE_3">
+            <div class="content">
+                <div class="title">Signature Frame Concept</div>
+                <div class="price">₦200,000</div>
+                <div class="desc">A unique living frame experience combining art and emotion.</div>
+                <a class="btn" href="https://wa.me/2349014501664">Order on WhatsApp</a>
+            </div>
+        </div>
 
-  <a href="https://wa.me/2349014501664" class="btn">Order on WhatsApp</a>
-</section>
-
-<section class="gallery">
-  <h2>More Artworks</h2>
-
-  <img src="https://files.catbox.moe/jgq4lb.jpg2">
-  <p>Untitled Piece — ₦200,000</p>
-
-  <img src="PASTE_IMAGE_3">
-  <p>Abstract Form — ₦150,000</p>
-</section>
+    </div>
+</div>
 
 <footer>
-  © 2026 K77 Art Studio — All Rights Reserved
+    © 2026 K77 Art Studio — All Rights Reserved
 </footer>
 
 </body>
-</html>
+          </html>
+          
