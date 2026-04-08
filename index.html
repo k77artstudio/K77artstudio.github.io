@@ -14,18 +14,22 @@ body {
   background: #000;
   color: white;
   font-family: Arial, sans-serif;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-/* CONTAINER */
-.container {
+/* MAIN WRAPPER */
+.wrapper {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
   padding: 70px 20px;
 }
 
 /* LOGO */
 .logo {
-  width: 140px;
-  margin-bottom: 30px;
+  width: 130px;
+  margin-bottom: 40px;
 }
 
 /* TITLE */
@@ -39,48 +43,54 @@ h1 {
 .signature {
   color: #d4af37;
   font-size: 18px;
-  margin-bottom: 30px;
-  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+/* DIVIDER LINE */
+.line {
+  width: 60%;
+  height: 1px;
+  background: rgba(212,175,55,0.3);
+  margin: 40px auto;
 }
 
 /* DESCRIPTION */
 .desc {
-  max-width: 550px;
-  margin: 0 auto 60px;
   line-height: 1.8;
   opacity: 0.85;
-  font-size: 15px;
+  padding: 0 10px;
 }
 
-/* ART FRAME (FIXED VERSION) */
-.art {
-  width: 70%;
-  max-width: 380px;
-  padding: 12px; /* inner breathing space */
+/* IMAGE FRAME */
+.frame {
+  padding: 14px;
   background: #0a0a0a;
   border: 6px solid #111;
   outline: 1px solid #d4af37;
   box-shadow: 0 20px 60px rgba(0,0,0,0.9);
-  margin: 50px auto 70px;
+}
+
+/* IMAGE */
+.frame img {
+  width: 100%;
   display: block;
-  border-radius: 4px;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 14px 28px;
   background: #d4af37;
   color: black;
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
-  margin-top: 10px;
 }
 
 /* FOOTER */
 .footer {
-  margin-top: 90px;
+  margin-top: 70px;
   font-size: 13px;
   opacity: 0.5;
 }
@@ -89,14 +99,16 @@ h1 {
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
   <!-- LOGO -->
   <img src="https://files.catbox.moe/sqylip.png" class="logo">
 
   <!-- BRAND -->
   <h1>K77 Art Studio</h1>
-  <p class="signature">Signature Living Frame</p>
+  <div class="signature">Signature Living Frame</div>
+
+  <div class="line"></div>
 
   <!-- DESCRIPTION -->
   <p class="desc">
@@ -104,10 +116,16 @@ h1 {
     Each piece is crafted to hold identity, memory and presence beyond the frame.
   </p>
 
-  <!-- ARTWORK -->
-  <img src="<a href="https://ibb.co/ZRk2zXgw"><img src="https://i.ibb.co/CpTPK89X/IMG-20260404-WA0030.jpg" alt="IMG-20260404-WA0030" border="0"></a>
+  <div class="line"></div>
 
-" class="art">
+  <!-- ARTWORK -->
+  <div class="frame">
+    <img src="
+<a href="https://ibb.co/6R5MZd3z"><img src="https://i.ibb.co/PZ8LYS7K/file-000000008b14722f887aefbd3f0bcafc.png" alt="file-000000008b14722f887aefbd3f0bcafc" border="0"></a>
+">
+  </div>
+
+  <div class="line"></div>
 
   <!-- BUTTON -->
   <a href="collection.html" class="btn">
