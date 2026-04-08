@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>K77 Art Studio — Living Frame</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #000000, #0a0a0a, #111111);
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* CONTAINER */
+.container {
+  padding: 40px 20px;
+}
+
+/* LOGO */
+.logo {
+  width: 180px;
+  margin-bottom: 25px;
+}
+
+/* TITLE */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* GOLD TEXT */
+.highlight {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+/* AUDIO */
+audio {
+  margin-top: 20px;
+  width: 90%;
+}
+
+/* ART FRAME */
+.art-frame {
+  margin-top: 40px;
+  width: 85%;
+  border: 8px solid #111;
+  outline: 2px solid #d4af37;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GRATITUDE */
+.gratitude {
+  margin-top: 40px;
+  font-size: 16px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO -->
+  <img src="https://files.catbox.moe/sqylip.png" class="logo">
+
+  <!-- TITLE -->
+  <h1>
+    Every piece carries a story, this one is yours.<br>
+    Victor — 2026 🌹
+  </h1>
+
+  <!-- SUBTEXT -->
+  <p class="highlight">
+    This piece speaks. Listen.
+  </p>
+
+  <!-- AUDIO -->
+  <audio controls>
+    <source src="https://files.catbox.moe/wwc3eu.mp3
+" type="audio/mpeg">
+  </audio>
+
+  <!-- ARTWORK (REPLACE IMAGE LINK BELOW) -->
+  <img src="https://files.catbox.moe/orbh8s.png" class="art-frame">
+
+  <!-- GRATITUDE -->
+  <p class="gratitude">
+    Thank you for being part of this story.<br>
+    I’m because you are.<br><br>
+    — Kindred Spirit
+  </p>
+
+</div>
+
+</body>
+</html>
+
+
