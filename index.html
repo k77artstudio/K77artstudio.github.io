@@ -1,111 +1,118 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>K77 Art Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: black;
-    color: white;
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-/* SLIDER */
-.slider {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+/* CONTAINER */
+.container {
+  padding: 40px 20px;
 }
 
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: contain; /* FIXED ZOOM */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
+/* LOGO */
+.logo {
+  width: 160px;
+  margin-bottom: 20px;
 }
 
-.slide.active {
-    opacity: 1;
-}
-
-/* DARK OVERLAY */
-.overlay-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-}
-
-/* TEXT CONTENT */
-.overlay {
-    position: absolute;
-    bottom: 60px;
-    left: 40px;
-    max-width: 500px;
-}
-
+/* TITLE */
 h1 {
-    color: gold;
-    font-size: 42px;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-.tagline {
-    font-size: 16px;
-    color: #ccc;
-    line-height: 1.6;
+/* SIGNATURE */
+.signature {
+  color: #d4af37;
+  font-size: 18px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
+/* DESCRIPTION */
+.desc {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* ART IMAGE */
+.art {
+  width: 85%;
+  max-width: 500px;
+  border: 8px solid #111;
+  outline: 2px solid #d4af37;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
 .btn {
-    margin-top: 20px;
-    padding: 12px 26px;
-    background: gold;
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
-    letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #d4af37;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 50px;
+  font-size: 14px;
+  opacity: 0.6;
 }
 </style>
 </head>
 
 <body>
 
-<div class="slider">
-    <div class="slide active" style="background-image:url('<a href="https://ibb.co/ZRk2zXgw"><img src="https://i.ibb.co/CpTPK89X/IMG-20260404-WA0030.jpg" alt="IMG-20260404-WA0030" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>mobile image upload</a><br />1')"></div>
-    <div class="slide" style="background-image:url('<a href="https://ibb.co/KcNdW3wz"><img src="https://i.ibb.co/nq39j5C8/Screenshot-20260403-180339.png" alt="Screenshot-20260403-180339" border="0"></a>2')"></div>
-    <div class="slide" style="background-image:url('<a href="https://ibb.co/pv6LST5V"><img src="https://i.ibb.co/99mr70SK/IMG-20260404-WA0028.jpg" alt="IMG 20260404 WA0028" border="0"></a>3')"></div>
+<div class="container">
 
-    <div class="overlay-bg"></div>
+  <!-- LOGO -->
+  <img src="https://files.catbox.moe/sqylip.png" class="logo">
 
-    <div class="overlay">
-        <h1>K77 Art Studio</h1>
-        <div class="tagline">
-            Signature Living Frame — where memory, identity, and art exist beyond the canvas.
-        </div>
-        <a href="collection.html" class="btn">View Collection</a>
-    </div>
+  <!-- BRAND -->
+  <h1>K77 Art Studio</h1>
+  <p class="signature">Signature Living Frame</p>
+
+  <!-- DESCRIPTION -->
+  <p class="desc">
+    Where Tattoo, Technology and Art converge into a living experience.
+    Each piece is crafted to hold identity, memory and presence beyond the frame.
+  </p>
+
+  <!-- ARTWORK -->
+  <img src="<a href="https://ibb.co/35H2w04s"><img src="https://i.ibb.co/Fkt29BmW/IMG-20260404-WA0030.jpg" alt="IMG-20260404-WA0030" border="0"></a>" class="art">
+
+  <!-- BUTTON -->
+  <a href="collection.html" class="btn">
+    View Collection
+  </a>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 K77 Art Studio
+  </div>
+
 </div>
-
-<script>
-let slides = document.querySelectorAll('.slide');
-let index = 0;
-
-setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-}, 4000);
-</script>
 
 </body>
 </html>
+
