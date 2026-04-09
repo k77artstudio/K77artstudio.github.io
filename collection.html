@@ -29,65 +29,62 @@ body {
   color: #666;
 }
 
-/* GRID */
+/* ✅ RELAXED GALLERY */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  padding: 15px;
+  grid-template-columns: 1fr; /* one per row */
+  gap: 25px;
+  padding: 20px;
 }
 
 /* CARD */
 .art {
   background: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-/* ✅ IMAGE FIX ADDED HERE */
+/* IMAGE */
 .art img {
   width: 100%;
-  height: auto;
-  max-height: 220px;
+  height: 280px;
   object-fit: contain;
-  border-radius: 6px;
-  background: #eee;
-  padding: 5px;
-  display: block;
+  background: #f2f2f2;
+  border-radius: 8px;
 }
 
 /* TEXT */
 .title {
-  font-size: 14px;
-  margin-top: 8px;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .price {
-  font-size: 13px;
+  font-size: 14px;
   color: #b8962e;
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
 .desc {
-  font-size: 12px;
+  font-size: 13px;
   color: #666;
 }
 
 /* BUTTON */
 .btn {
   display: block;
-  margin-top: 8px;
+  margin-top: 10px;
   text-align: center;
   text-decoration: none;
   border: 1px solid #b8962e;
   color: #b8962e;
-  padding: 6px;
-  border-radius: 5px;
-  font-size: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
 }
 
-/* BACK BUTTON (BOTTOM) */
+/* BACK BUTTON */
 .back {
   text-align: center;
   padding: 30px;
@@ -101,7 +98,7 @@ body {
 /* DESKTOP */
 @media(min-width: 700px) {
   .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>
@@ -116,28 +113,22 @@ body {
 
 <div class="gallery">
 
-<!-- ART 1 -->
 <div class="art">
   <img src="https://ibb.co/0RytGyVX">
-  <div class="title">Voice</div>
+  <div class="title">voice</div>
   <div class="price">₦180,000</div>
-  <div class="desc">A custom piece (one of five)This piece carries yhe weight of the wind
-    And hold the identity of the Aftican people.
-    Includes certificate of authenticity.</div>
+  <div class="desc">A custom piece. (one of five). This piece carries the weight of the wind. A narrative of identity of a black race.Includes certificate of authenticity.</div>
   <a class="btn" href="https://wa.me/2349014501664?text=Interested%20in%20Piece%20One">Enquire</a>
 </div>
 
-<!-- ART 2 -->
 <div class="art">
   <img src="https://ibb.co/NdQkBrKk">
-  <div class="title">Dark Prodigy</div>
-  <div class="price">₦150,000</div>
-  <div class="desc">A personal piece made for the love of companionship
-    Includes certificate of authenticity.</div>
+  <div class="title">Datk Prodigy</div>
+  <div class="price">₦160,000</div>
+  <div class="desc">A personal piece for the love of companionship. Includes certificate of authenticity.</div>
   <a class="btn" href="#">Enquire</a>
 </div>
 
-<!-- ART 3 -->
 <div class="art">
   <img src="PUT-YOUR-IMAGE-LINK-HERE">
   <div class="title">Piece Three</div>
@@ -146,7 +137,6 @@ body {
   <a class="btn" href="#">Enquire</a>
 </div>
 
-<!-- ART 4 -->
 <div class="art">
   <img src="PUT-YOUR-IMAGE-LINK-HERE">
   <div class="title">Piece Four</div>
@@ -155,7 +145,6 @@ body {
   <a class="btn" href="#">Enquire</a>
 </div>
 
-<!-- ART 5 -->
 <div class="art">
   <img src="PUT-YOUR-IMAGE-LINK-HERE">
   <div class="title">Piece Five</div>
@@ -164,7 +153,6 @@ body {
   <a class="btn" href="#">Enquire</a>
 </div>
 
-<!-- ART 6 -->
 <div class="art">
   <img src="PUT-YOUR-IMAGE-LINK-HERE">
   <div class="title">Piece Six</div>
