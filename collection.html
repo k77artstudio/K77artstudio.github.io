@@ -3,30 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K77 Art Gallery</title>
+<title>Art Gallery</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f7f5f0;
-  color: #111;
+  background: #f5f7fb;
 }
 
-/* HEADER */
-.header {
-  text-align: center;
-  padding: 40px 20px 10px;
-}
-
-.header h1 {
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-
-.header p {
-  font-size: 13px;
-  color: #666;
+/* CONTAINER */
+.container {
+  padding: 20px;
 }
 
 /* GRID */
@@ -34,145 +22,135 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  padding: 15px;
 }
 
-/* CARD */
+/* ART CARD */
 .art {
   background: white;
+  border-radius: 10px;
   padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* IMAGE */
+/* 🔥 IMAGE FIX (PERMANENT) */
 .art img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;   /* prevents cropping */
+  background: #eee;
   border-radius: 6px;
+  padding: 5px;
+  display: block;        /* prevents weird spacing bugs */
 }
 
 /* TEXT */
 .title {
   font-size: 14px;
+  font-weight: bold;
   margin-top: 8px;
 }
 
 .price {
+  color: #555;
   font-size: 13px;
-  color: #b8962e;
-  margin: 5px 0;
 }
 
 .desc {
   font-size: 12px;
-  color: #666;
+  color: #777;
 }
 
 /* BUTTON */
 .btn {
   display: block;
   margin-top: 8px;
+  padding: 8px;
   text-align: center;
+  background: black;
+  color: white;
   text-decoration: none;
-  border: 1px solid #b8962e;
-  color: #b8962e;
-  padding: 6px;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 12px;
 }
 
-/* BACK BUTTON (BOTTOM) */
+/* BACK BUTTON */
 .back {
   text-align: center;
-  padding: 30px;
-}
-
-.back a {
-  text-decoration: none;
-  color: #555;
-}
-
-/* DESKTOP */
-@media(min-width: 700px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  margin-top: 40px;
 }
 </style>
-
 </head>
+
 <body>
 
-<div class="header">
-  <h1>Art Gallery</h1>
-  <p>Original living pieces. Each one carties a story and holds an identity.</p>
-</div>
+<div class="container">
 
-<div class="gallery">
+  <div class="gallery">
 
-<!-- ART 1 -->
-<div class="art">
-  <img src="https://files.catbox.moe/5l34kp.jpg">
-  <div class="title">Dark Prodigy</div>
-  <div class="price">₦170,000</div>
-  <div class="desc">A personal piece crafted with love.
-    Includes certificate of authenticity.</div>
-  <a class="btn" href="https://wa.me/2349014501664?text=Interested%20in%20Piece%20One">Enquire</a>
-</div>
+    <!-- ART 1 -->
+    <div class="art">
+      <img src="https://files.catbox.moe/5l34kp.jpg">
+      <div class="title">Voic</div>
+      <div class="price">#180,000</div>
+      <div class="desc">A custom piece(One of five)
+      Includes a certificate of Authenticity.
+      This piece carries the weight of the wind, holds the identity of the Aftican people</div>
+      <a href="https://wa.me/2349014501664" class="btn">Enquire</a>
+    </div>
 
-<!-- ART 2 -->
-<div class="art">
-  <img src="https://files.catbox.moe/jzd5wm.jpg">
-  <div class="title">Voice</div>
-  <div class="price">₦180,000</div>
-  <div class="desc">A custom piece
-    A voice that carries the weight of the wind.
-    A narrative of the African people. Includes certificate of authenticity.</div>
-  <a class="btn" href="#">Enquire</a>
-</div>
+    <!-- ART 2 -->
+    <div class="art">
+      <img src="https://files.catbox.moe/jzd5wm.jpg">
+      <div class="title">Dark Prodigy</div>
+      <div class="price">₦170,000</div>
+      <div class="desc">A personal piece.Includes a Certificate of Authenticity.
+      This piece tells a story of love and companioship</div>
+      <a href="https://wa.me/2349014501664" class="btn">Enquire</a>
+    </div>
 
-<!-- ART 3 -->
-<div class="art">
-  <img src="PUT-YOUR-IMAGE-LINK-HERE">
-  <div class="title">Piece Three</div>
-  <div class="price">₦200,000</div>
-  <div class="desc">Includes certificate of authenticity.</div>
-  <a class="btn" href="#">Enquire</a>
-</div>
+    <!-- ART 3 -->
+    <div class="art">
+      <img src="PUT-YOUR-CATBOX-LINK.jpg">
+      <div class="title">Artwork Title</div>
+      <div class="price">₦XXX</div>
+      <div class="desc">Short description</div>
+      <a href="https://wa.me/234XXXXXXXXXX" class="btn">Enquire</a>
+    </div>
 
-<!-- ART 4 -->
-<div class="art">
-  <img src="PUT-YOUR-IMAGE-LINK-HERE">
-  <div class="title">Piece Four</div>
-  <div class="price">₦180,000</div>
-  <div class="desc">Includes certificate of authenticity.</div>
-  <a class="btn" href="#">Enquire</a>
-</div>
+    <!-- ART 4 -->
+    <div class="art">
+      <img src="PUT-YOUR-CATBOX-LINK.jpg">
+      <div class="title">Artwork Title</div>
+      <div class="price">₦XXX</div>
+      <div class="desc">Short description</div>
+      <a href="https://wa.me/234XXXXXXXXXX" class="btn">Enquire</a>
+    </div>
 
-<!-- ART 5 -->
-<div class="art">
-  <img src="PUT-YOUR-IMAGE-LINK-HERE">
-  <div class="title">Piece Five</div>
-  <div class="price">₦160,000</div>
-  <div class="desc">Includes certificate of authenticity.</div>
-  <a class="btn" href="#">Enquire</a>
-</div>
+    <!-- ART 5 -->
+    <div class="art">
+      <img src="PUT-YOUR-CATBOX-LINK.jpg">
+      <div class="title">Artwork Title</div>
+      <div class="price">₦XXX</div>
+      <div class="desc">Short description</div>
+      <a href="https://wa.me/234XXXXXXXXXX" class="btn">Enquire</a>
+    </div>
 
-<!-- ART 6 -->
-<div class="art">
-  <img src="PUT-YOUR-IMAGE-LINK-HERE">
-  <div class="title">Piece Six</div>
-  <div class="price">₦190,000</div>
-  <div class="desc">Includes certificate of authenticity.</div>
-  <a class="btn" href="#">Enquire</a>
-</div>
+    <!-- ART 6 -->
+    <div class="art">
+      <img src="PUT-YOUR-CATBOX-LINK.jpg">
+      <div class="title">Artwork Title</div>
+      <div class="price">₦XXX</div>
+      <div class="desc">Short description</div>
+      <a href="https://wa.me/234XXXXXXXXXX" class="btn">Enquire</a>
+    </div>
 
-</div>
+  </div>
 
-<div class="back">
-  <a href="index.html">← Back to Home</a>
+  <!-- BACK BUTTON -->
+  <div class="back">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
 </div>
 
 </body>
