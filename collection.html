@@ -16,78 +16,77 @@ body {
 /* HEADER */
 .header {
   text-align: center;
-  padding: 40px 20px 10px;
+  padding: 30px 15px 10px;
 }
 
 .header h1 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 5px;
 }
 
 .header p {
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
 }
 
-/* ✅ RELAXED GALLERY */
+/* ✅ PHONE GALLERY STYLE (2 PER ROW) */
 .gallery {
   display: grid;
-  grid-template-columns: 1fr; /* one per row */
-  gap: 25px;
-  padding: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 15px;
 }
 
 /* CARD */
 .art {
   background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-/* IMAGE */
+/* ✅ IMAGE FIX (VISIBLE + CLEAN) */
 .art img {
   width: 100%;
-  height: 280px;
-  object-fit: contain;
-  background: #f2f2f2;
-  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;   /* fills space like phone gallery */
+  border-radius: 6px;
 }
 
 /* TEXT */
 .title {
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 13px;
+  margin-top: 6px;
 }
 
 .price {
-  font-size: 14px;
+  font-size: 12px;
   color: #b8962e;
-  margin: 6px 0;
+  margin: 4px 0;
 }
 
 .desc {
-  font-size: 13px;
+  font-size: 11px;
   color: #666;
 }
 
 /* BUTTON */
 .btn {
   display: block;
-  margin-top: 10px;
+  margin-top: 6px;
   text-align: center;
   text-decoration: none;
   border: 1px solid #b8962e;
   color: #b8962e;
-  padding: 8px;
-  border-radius: 6px;
-  font-size: 13px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 11px;
 }
 
 /* BACK BUTTON */
 .back {
   text-align: center;
-  padding: 30px;
+  padding: 25px;
 }
 
 .back a {
@@ -98,7 +97,7 @@ body {
 /* DESKTOP */
 @media(min-width: 700px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 </style>
@@ -114,18 +113,18 @@ body {
 <div class="gallery">
 
 <div class="art">
-  <img src="https://ibb.co/0RytGyVX">
-  <div class="title">voice</div>
-  <div class="price">₦180,000</div>
-  <div class="desc">A custom piece. (one of five). This piece carries the weight of the wind. A narrative of identity of a black race.Includes certificate of authenticity.</div>
+  <img src="https://ibb.co/NdQkBrKk">
+  <div class="title">a personal piece</div>
+  <div class="price">₦170,000</div>
+  <div class="desc">Includes certificate of authenticity.</div>
   <a class="btn" href="https://wa.me/2349014501664?text=Interested%20in%20Piece%20One">Enquire</a>
 </div>
 
 <div class="art">
-  <img src="https://ibb.co/NdQkBrKk">
-  <div class="title">Datk Prodigy</div>
-  <div class="price">₦160,000</div>
-  <div class="desc">A personal piece for the love of companionship. Includes certificate of authenticity.</div>
+  <img src="PUT-YOUR-IMAGE-LINK-HERE">
+  <div class="title">Piece Two</div>
+  <div class="price">₦150,000</div>
+  <div class="desc">Includes certificate of authenticity.</div>
   <a class="btn" href="#">Enquire</a>
 </div>
 
