@@ -3,162 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Collection - K77 Art Studio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<title>Collection — K77 Art Studio</title>
 
 <style>
 body {
   margin: 0;
-  background: #000;
-  color: #fff;
   font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #111;
 }
 
-/* WRAPPER */
-.wrapper {
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 70px 20px;
-  text-align: center;
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
 /* TITLE */
 h1 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  letter-spacing: 1px;
 }
 
-/* DIVIDER */
-.line {
-  width: 50%;
-  height: 1px;
-  background: rgba(212,175,55,0.25);
-  margin: 50px auto;
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
 }
 
-/* ART CARD */
-.art {
-  margin-bottom: 70px;
+/* CARD */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* IMAGE */
-.art img {
+.card img {
   width: 100%;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-/* TITLE */
+/* TEXT */
 .title {
-  font-size: 20px;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #555;
   margin-bottom: 10px;
 }
 
-/* DESCRIPTION */
-.desc {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-/* PRICE */
 .price {
-  color: #d4af37;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 16px;
+  color: #b8962e;
+  margin-bottom: 15px;
 }
 
 /* BUTTON */
-.btn {
+.button {
   display: inline-block;
-  padding: 12px 26px;
-  background: #d4af37;
-  color: #000;
+  padding: 10px 18px;
+  border: 1px solid #b8962e;
+  color: #b8962e;
   text-decoration: none;
-  border-radius: 3px;
-  font-weight: bold;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
-/* BACK LINK */
-.back {
-  margin-top: 50px;
-  display: inline-block;
-  opacity: 0.6;
-  text-decoration: none;
-  color: white;
-}
-
-/* FOOTER */
-.footer {
-  margin-top: 80px;
-  font-size: 12px;
-  opacity: 0.5;
+/* DESKTOP */
+@media(min-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="wrapper">
+<div class="container">
 
 <h1>Collection</h1>
 
-<div class="line"></div>
+<div class="grid">
 
 <!-- ART 1 -->
-<div class="art">
-  <img src="<a href="https://ibb.co/27KCsYzd"><img src="https://i.ibb.co/kgcw96LX/Untitled7-20260408013023.png" alt="Untitled7-20260408013023" border="0"></a>">
-  <div class="title">dark prodigy</div>
+<div class="card">
+  <a href="art1.html">
+    <img src="PASTE_IMAGE_LINK_HERE">
+  </a>
+
+  <div class="title">Untitled I</div>
+
   <div class="desc">
-    A bold expression of identity and presence, crafted to stand out in any space.
+    A quiet expression of identity and presence.
   </div>
-  <div class="price">₦170,000</div>
-  <a href="https://wa.me/2349014501664?text=Hello,%20I%20want%20to%20order%20Untitled%20Piece" class="btn">
-    Order on WhatsApp
+
+  <div class="price">Original • ₦170,000</div>
+
+  <a class="button"
+     href="https://wa.me/2349014501664?text=Hello,%20I%20am%20interested%20in%20Untitled%20I">
+     Enquire
   </a>
 </div>
-
-<div class="line"></div>
 
 <!-- ART 2 -->
-<div class="art">
-  <img src="PASTE_IMAGE_2_HERE">
+<div class="card">
+  <a href="art2.html">
+    <img src="PASTE_IMAGE_LINK_HERE">
+  </a>
+
   <div class="title">Abstract Form</div>
+
   <div class="desc">
-    A minimal yet powerful composition that captures depth and subtle emotion.
+    Movement captured in still form.
   </div>
-  <div class="price">₦150,000</div>
-  <a href="https://wa.me/2349014501664?text=Hello,%20I%20want%20to%20order%20Abstract%20Form" class="btn">
-    Order on WhatsApp
+
+  <div class="price">Original • ₦150,000</div>
+
+  <a class="button"
+     href="https://wa.me/2349014501664?text=Hello,%20I%20am%20interested%20in%20Abstract%20Form">
+     Enquire
   </a>
 </div>
-
-<div class="line"></div>
 
 <!-- ART 3 -->
-<div class="art">
-  <img src="PASTE_IMAGE_3_HERE">
-  <div class="title">Signature Frame</div>
+<div class="card">
+  <a href="art3.html">
+    <img src="PASTE_IMAGE_LINK_HERE">
+  </a>
+
+  <div class="title">Signature Piece</div>
+
   <div class="desc">
-    A refined piece designed to embody the essence of the living frame experience.
+    A refined balance of story and intention.
   </div>
-  <div class="price">₦200,000</div>
-  <a href="https://wa.me/2349014501664?text=Hello,%20I%20want%20to%20order%20Signature%20Frame" class="btn">
-    Order on WhatsApp
+
+  <div class="price">Original • ₦200,000</div>
+
+  <a class="button"
+     href="https://wa.me/2349014501664?text=Hello,%20I%20am%20interested%20in%20Signature%20Piece">
+     Enquire
   </a>
 </div>
 
-<div class="line"></div>
-
-<!-- BACK -->
-<a href="index.html" class="back">← Back to Home</a>
-
-<div class="footer">
-  © 2026 K77 Art Studio
 </div>
 
 </div>
