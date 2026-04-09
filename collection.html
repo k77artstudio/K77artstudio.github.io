@@ -16,32 +16,20 @@ body {
 /* HEADER */
 .header {
   text-align: center;
-  padding: 50px 20px 20px;
+  padding: 40px 20px 10px;
 }
 
 .header h1 {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 5px;
 }
 
 .header p {
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
 }
 
-/* BACK BUTTON */
-.back {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.back a {
-  text-decoration: none;
-  color: #555;
-  font-size: 14px;
-}
-
-/* GRID (PHONE FIRST) */
+/* GRID */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -60,6 +48,8 @@ body {
 /* IMAGE */
 .art img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 6px;
 }
 
@@ -93,7 +83,18 @@ body {
   font-size: 12px;
 }
 
-/* TABLET / DESKTOP */
+/* BACK BUTTON (BOTTOM) */
+.back {
+  text-align: center;
+  padding: 30px;
+}
+
+.back a {
+  text-decoration: none;
+  color: #555;
+}
+
+/* DESKTOP */
 @media(min-width: 700px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -106,42 +107,72 @@ body {
 
 <div class="header">
   <h1>Art Gallery</h1>
-  <p>Original living pieces. Each one holds identity.</p>
-</div>
-
-<div class="back">
-  <a href="index.html">← Back to Home</a>
+  <p>Original living pieces. Each one carties a story and holds an identity.</p>
 </div>
 
 <div class="gallery">
 
 <!-- ART 1 -->
 <div class="art">
-  <img src="https://ibb.co/6RLLCGkd">
-  <div class="title">Voice I</div>
-  <div class="price">₦180,000</div>
-  <div class="desc">This piece carries the weight of wind.A narrative and an identity of the Aftiacn people Includes certificate of authenticity.</div>
-  <a class="btn" href="https://wa.me/2349014501664?text=Interested%20in%20Untitled%20I">Enquire</a>
+  <img src="https://ibb.co/NdQkBrKk">
+  <div class="title">Dark Prodigy</div>
+  <div class="price">₦170,000</div>
+  <div class="desc">A personal piece crafted with love.
+    Includes certificate of authenticity.</div>
+  <a class="btn" href="https://wa.me/2349014501664?text=Interested%20in%20Piece%20One">Enquire</a>
 </div>
 
 <!-- ART 2 -->
 <div class="art">
-  <img src="https://ibb.co/NdQkBrKk">
-  <div class="title">A dark prodigy</div>
-  <div class="price">₦170,000</div>
-  <div class="desc">A personal piece.Crafted with love and light. Includes certificate of authenticity.</div>
-  <a class="btn" href="https://wa.me/2349014501664?text=Interested%20in%20Abstract%20Form">Enquire</a>
+  <img src="https://ibb.co/6RLLCGkd">
+  <div class="title">Voice</div>
+  <div class="price">₦180,000</div>
+  <div class="desc">A custom piece
+    A voice that carries the weight of the wind.
+    A narrative of the African people. Includes certificate of authenticity.</div>
+  <a class="btn" href="#">Enquire</a>
 </div>
 
 <!-- ART 3 -->
 <div class="art">
-  <img src="PASTE_IMAGE_LINK">
-  <div class="title">Signature Piece</div>
+  <img src="PUT-YOUR-IMAGE-LINK-HERE">
+  <div class="title">Piece Three</div>
   <div class="price">₦200,000</div>
   <div class="desc">Includes certificate of authenticity.</div>
-  <a class="btn" href="https://wa.me/2349014501664?text=Interested%20in%20Signature%20Piece">Enquire</a>
+  <a class="btn" href="#">Enquire</a>
 </div>
 
+<!-- ART 4 -->
+<div class="art">
+  <img src="PUT-YOUR-IMAGE-LINK-HERE">
+  <div class="title">Piece Four</div>
+  <div class="price">₦180,000</div>
+  <div class="desc">Includes certificate of authenticity.</div>
+  <a class="btn" href="#">Enquire</a>
+</div>
+
+<!-- ART 5 -->
+<div class="art">
+  <img src="PUT-YOUR-IMAGE-LINK-HERE">
+  <div class="title">Piece Five</div>
+  <div class="price">₦160,000</div>
+  <div class="desc">Includes certificate of authenticity.</div>
+  <a class="btn" href="#">Enquire</a>
+</div>
+
+<!-- ART 6 -->
+<div class="art">
+  <img src="PUT-YOUR-IMAGE-LINK-HERE">
+  <div class="title">Piece Six</div>
+  <div class="price">₦190,000</div>
+  <div class="desc">Includes certificate of authenticity.</div>
+  <a class="btn" href="#">Enquire</a>
+</div>
+
+</div>
+
+<div class="back">
+  <a href="index.html">← Back to Home</a>
 </div>
 
 </body>
