@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>K77 Art Studio - Living Frame</title>
+<title>K77 Art Studio — Living Frame</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet"/>
 <style>
 :root{
@@ -26,7 +26,7 @@ body{background:var(--black);color:var(--cream);font-family:'Montserrat',sans-se
 ::-webkit-scrollbar-track{background:var(--black);}
 ::-webkit-scrollbar-thumb{background:var(--gold-dim);}
 
-/* ENTRANCE */
+/* ─── ENTRANCE ─────────────────────────────────────────── */
 #entrance{
   position:fixed;inset:0;background:#000;z-index:99999;
   display:flex;flex-direction:column;align-items:center;
@@ -71,7 +71,7 @@ body{background:var(--black);color:var(--cream);font-family:'Montserrat',sans-se
 }
 @keyframes ef{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
-/* PASSWORD MODAL */
+/* ─── PASSWORD MODAL ────────────────────────────────────── */
 #pw-modal{
   display:none;position:fixed;inset:0;background:rgba(0,0,0,0.93);
   z-index:20000;align-items:center;justify-content:center;
@@ -86,14 +86,14 @@ body{background:var(--black);color:var(--cream);font-family:'Montserrat',sans-se
 .pw-cancel{width:100%;padding:10px;background:transparent;border:1px solid var(--border);color:rgba(255,255,255,0.3);font-family:'Montserrat',sans-serif;font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;display:block;}
 .pw-err{font-size:0.52rem;color:var(--red);margin-top:10px;display:none;letter-spacing:0.15em;}
 
-/* EDIT TOGGLE */
+/* ─── EDIT MODE ─────────────────────────────────────────── */
 #edit-toggle{
   display:none;position:fixed;bottom:24px;right:24px;z-index:10000;
   background:var(--red);color:#fff;border:none;padding:13px 22px;
   font-family:'Montserrat',sans-serif;font-size:0.56rem;letter-spacing:0.28em;
   text-transform:uppercase;cursor:pointer;font-weight:600;
 }
-#secret-tap{position:fixed;bottom:0;right:0;width:44px;height:44px;z-index:10000;}
+#secret-tap{position:fixed;bottom:0;right:0;width:44px;height:44px;z-index:10000;cursor:default;}
 .edit-bar{
   display:none;position:fixed;top:0;left:0;right:0;z-index:9998;
   background:rgba(201,168,76,0.1);border-bottom:1px solid var(--gold-dim);
@@ -105,14 +105,14 @@ body.editing nav{top:30px;}
 body.editing [contenteditable="true"]{outline:1px dashed rgba(201,168,76,0.4);cursor:text;padding:2px 4px;min-height:1em;}
 body.editing [contenteditable="true"]:focus{outline:1px solid var(--gold);background:rgba(201,168,76,0.06);}
 
-/* NAV */
+/* ─── NAV ───────────────────────────────────────────────── */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(0,0,0,0.92),transparent);transition:top 0.3s;}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;text-decoration:none;}
 .nav-links{display:flex;gap:26px;list-style:none;}
 .nav-links a{font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.42);text-decoration:none;transition:color 0.3s;}
 .nav-links a:hover{color:var(--gold);}
 
-/* HERO */
+  /* ─── HERO ──────────────────────────────────────────────── */
 #hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:20px;}
 .hbg{position:absolute;inset:0;background:radial-gradient(ellipse at 15% 50%,rgba(201,168,76,0.08) 0%,transparent 55%),radial-gradient(ellipse at 85% 20%,rgba(201,168,76,0.06) 0%,transparent 50%),#000;}
 .vline{position:absolute;left:50%;transform:translateX(-50%);width:1px;animation:vl 2s ease forwards;}
@@ -128,13 +128,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 40px;display:f
 .h-cta{margin-top:48px;opacity:0;animation:fu 1s ease 1.5s forwards;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
 @keyframes fu{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
 
-/* BUTTONS */
+/* ─── BUTTONS ───────────────────────────────────────────── */
 .btn-gold{padding:13px 36px;border:1px solid var(--gold);color:#000;background:var(--gold);font-family:'Montserrat',sans-serif;font-size:0.58rem;letter-spacing:0.28em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;cursor:pointer;display:inline-block;font-weight:500;}
 .btn-gold:hover{background:transparent;color:var(--gold);}
 .btn-out{padding:13px 36px;border:1px solid rgba(201,168,76,0.3);color:rgba(255,255,255,0.52);background:transparent;font-family:'Montserrat',sans-serif;font-size:0.58rem;letter-spacing:0.28em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;cursor:pointer;display:inline-block;}
 .btn-out:hover{border-color:var(--gold);color:var(--gold);}
 
-/* LAYOUT */
+/* ─── LAYOUT HELPERS ────────────────────────────────────── */
 .wrap{padding:96px 40px;max-width:1200px;margin:0 auto;}
 .wrap-wide{padding:96px 40px;max-width:1400px;margin:0 auto;}
 .dark{background:var(--dark);}
@@ -149,7 +149,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 40px;display:f
 .rv.on{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 
-/* ABOUT */
+/* ─── ABOUT ─────────────────────────────────────────────── */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center;}
 .about-text p{font-size:0.82rem;line-height:2.1;color:rgba(255,255,255,0.56);margin-bottom:16px;font-weight:300;}
 .about-text p strong{color:var(--gold);font-weight:500;}
@@ -161,11 +161,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 40px;display:f
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);display:block;}
 .stat-lbl{font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.32);margin-top:5px;display:block;}
 
-/* GALLERY */
+/* ─── GALLERY ───────────────────────────────────────────── */
 .gallery-intro{max-width:540px;font-size:0.76rem;line-height:1.9;color:rgba(255,255,255,0.42);font-weight:300;margin-bottom:44px;}
 .pieces{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
 
-/* PIECE CARD */
+/* ─── PIECE CARD ────────────────────────────────────────── */
 .piece{position:relative;background:var(--card);border:1px solid var(--border);transition:border-color 0.3s;display:flex;flex-direction:column;}
 .piece:hover{border-color:rgba(201,168,76,0.28);}
 .piece-img{position:relative;aspect-ratio:3/4;overflow:hidden;background:#000;}
@@ -204,7 +204,7 @@ body.editing .piece-controls{display:flex;}
 .add-btn:hover{border-color:var(--gold);background:rgba(201,168,76,0.04);}
 body.editing .add-btn{display:inline-block;}
 
-/* EXPERIENCE */
+/* ─── EXPERIENCE ────────────────────────────────────────── */
 .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:52px;}
 .exp-card{padding:44px 30px;border:1px solid var(--border);position:relative;overflow:hidden;background:#000;}
 .exp-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform 0.4s;}
@@ -213,7 +213,7 @@ body.editing .add-btn{display:inline-block;}
 .exp-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:#fff;margin-bottom:11px;}
 .exp-text{font-size:0.68rem;line-height:1.9;color:rgba(255,255,255,0.38);font-weight:300;}
 
-/* PACKAGE */
+/* ─── PACKAGE ───────────────────────────────────────────── */
 .pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:52px;}
 .pkg-list{list-style:none;display:flex;flex-direction:column;}
 .pkg-list li{padding:18px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:14px;}
@@ -231,14 +231,13 @@ body.editing .add-btn{display:inline-block;}
 .pkg-item::before{content:'*';color:var(--gold);font-size:0.6rem;flex-shrink:0;}
 .pkg-sig{font-family:'Dancing Script',cursive;color:var(--gold);font-size:1.25rem;margin-top:16px;}
 
-/* ARCHIVE */
+/* ─── ARCHIVE ───────────────────────────────────────────── */
 .archive-box{border:1px solid var(--gold-dim);padding:64px;text-align:center;position:relative;margin-top:48px;background:linear-gradient(135deg,rgba(201,168,76,0.04) 0%,transparent 100%);}
-.archive-box::before{content:'';position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--dark);padding:0 14px;color:var(--gold);font-size:0.68rem;}
 .archive-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3.8vw,2.8rem);font-weight:300;color:#fff;font-style:italic;margin-bottom:16px;}
 .archive-text{font-size:0.74rem;line-height:2;color:rgba(255,255,255,0.38);max-width:540px;margin:0 auto 28px;font-weight:300;}
 .archive-badge{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--green);padding:10px 24px;color:var(--green);font-size:0.5rem;letter-spacing:0.26em;text-transform:uppercase;}
 
-/* CONTACT */
+/* ─── CONTACT ───────────────────────────────────────────── */
 .contact-links{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-bottom:56px;}
 .contact-link{display:flex;flex-direction:column;align-items:center;gap:9px;text-decoration:none;transition:all 0.3s;}
 .contact-icon{width:50px;height:50px;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;transition:all 0.3s;font-size:1.05rem;}
@@ -249,13 +248,13 @@ body.editing .add-btn{display:inline-block;}
 .registry-box::before{content:"COLLECTOR'S REGISTRY";position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:#000;padding:0 14px;font-size:0.44rem;letter-spacing:0.36em;color:var(--gold);}
 .registry-box p{font-size:0.72rem;line-height:1.9;color:rgba(255,255,255,0.38);font-weight:300;margin-bottom:22px;}
 
-/* FOOTER */
+/* ─── FOOTER ────────────────────────────────────────────── */
 footer{border-top:1px solid var(--border);padding:28px 40px;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:300;letter-spacing:0.3em;color:var(--gold);}
 .footer-sig{font-family:'Dancing Script',cursive;color:var(--gold-dim);font-size:0.9rem;}
 .footer-copy{font-size:0.46rem;letter-spacing:0.16em;color:rgba(255,255,255,0.14);text-transform:uppercase;}
 
-/* MOBILE */
+/* ─── MOBILE ────────────────────────────────────────────── */
 @media(max-width:960px){
   .pieces{grid-template-columns:repeat(2,1fr);}
   .exp-grid{grid-template-columns:1fr 1fr;}
@@ -279,6 +278,749 @@ footer{border-top:1px solid var(--border);padding:28px 40px;max-width:1200px;mar
 </head>
 <body>
 
-<!-- ENTRANCE -->
+<!-- ── EDIT BAR ── -->
+<div class="edit-bar">✦ Edit Mode Active — Click any text to edit · Click artwork to replace image · Changes auto-saved ✦</div>
+
+  <!-- ── ENTRANCE ── -->
 <div id="entrance">
-  <canvas id="ent-canvas"><
+  <canvas id="ent-canvas"></canvas>
+  <div class="ent-content">
+    <div class="ent-logo">K<span>77</span></div>
+    <div class="ent-sig">Living Frame</div>
+    <div class="ent-line"></div>
+    <div class="ent-tag">Art Studio &nbsp;·&nbsp; Original Works &nbsp;·&nbsp; Est. 2024</div>
+    <button class="ent-btn" id="ent-enter">Enter the Studio</button>
+    <div class="ent-sub">Private collection available upon request</div>
+  </div>
+</div>
+
+<!-- ── PASSWORD MODAL ── -->
+<div id="pw-modal">
+  <div class="pw-box">
+    <div class="pw-title">Studio Access</div>
+    <div class="pw-sub">Enter curator password</div>
+    <input class="pw-input" id="pw-input" type="password" placeholder="••••••••" autocomplete="off"/>
+    <button class="pw-go" id="pw-go">Unlock Edit Mode</button>
+    <button class="pw-cancel" id="pw-cancel">Cancel</button>
+    <div class="pw-err" id="pw-err">Incorrect password</div>
+  </div>
+</div>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="#hero">K77</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#package">Package</a></li>
+    <li><a href="#archive">Archive</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hbg"></div>
+  <div class="vline t"></div>
+  <div class="vline b"></div>
+  <div class="h-eye" contenteditable="false">Original Works &nbsp;·&nbsp; K77 Studio</div>
+  <h1 class="h-title">Liv<span>ing</span><br>Frame</h1>
+  <div class="h-sig" contenteditable="false">by K77</div>
+  <div class="h-rule"></div>
+  <div class="h-tag" contenteditable="false">Where Canvas Becomes Presence</div>
+  <div class="h-cta">
+    <a class="btn-gold" href="#gallery">View Collection</a>
+    <a class="btn-out" href="#contact">Inquire</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── ABOUT ── -->
+<section id="about" class="dark">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text rv">
+        <span class="label">The Artist</span>
+        <h2 class="title">Crafting <em>Worlds</em><br>Within Edges</h2>
+        <div class="gold-line"></div>
+        <p contenteditable="false"><strong>K77</strong> is an independent visual artist whose work lives at the intersection of raw emotion and meticulous craft. Each piece is conceived as a living object — not merely decoration, but a presence that shifts with the light and the viewer.</p>
+        <p contenteditable="false">Working across <em>mixed media, oil, and digital print</em>, the studio produces limited works for private collectors and curated spaces. Every frame is signed, numbered, and accompanied by a certificate of provenance.</p>
+        <p contenteditable="false">Based in an intimate studio, K77 accepts a small number of commission inquiries each season — ensuring every piece receives the full weight of attention it deserves.</p>
+        <div style="margin-top:28px;">
+          <a class="btn-gold" href="#contact">Commission a Piece</a>
+        </div>
+      </div>
+      <div class="stats rv d2">
+        <div class="stat">
+          <span class="stat-num" contenteditable="false">47</span>
+          <span class="stat-lbl">Original Works</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" contenteditable="false">23</span>
+          <span class="stat-lbl">Private Collectors</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" contenteditable="false">6</span>
+          <span class="stat-lbl">Seasons Active</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" contenteditable="false">3</span>
+          <span class="stat-lbl">Gallery Exhibitions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ── GALLERY ── -->
+<section id="gallery">
+  <div class="wrap-wide">
+    <div class="rv center">
+      <span class="label">The Collection</span>
+      <h2 class="title">Current <em>Works</em></h2>
+      <div class="gold-line"></div>
+      <p class="gallery-intro" style="margin:0 auto 44px;" contenteditable="false">Each piece is a singular event — conceived once, executed once, released once. Availability is noted below. Inquiries welcomed for sold and archived works.</p>
+    </div>
+
+    <div class="pieces" id="pieces-grid">
+
+      <!-- PIECE 1 -->
+      <div class="piece rv d1">
+        <div class="piece-img" onclick="triggerUpload(this)">
+          <div class="piece-empty">
+            <div class="piece-empty-sym">✦</div>
+            <div class="piece-empty-txt">Upload Artwork</div>
+          </div>
+          <div class="upload-ov">
+            <div class="u-icon">🖼</div>
+            <div class="u-text">Click to replace image</div>
+          </div>
+          <input type="file" accept="image/*" style="display:none" onchange="loadImg(this)">
+        </div>
+        <div class="piece-info">
+          <div class="piece-top">
+            <span class="piece-id">K77 — 001</span>
+            <span class="badge badge-av">Available</span>
+          </div>
+          <div class="piece-title" contenteditable="false">Vessel of Silence</div>
+          <div class="piece-desc" contenteditable="false">Oil and gold leaf on linen. A study in interior light — the moment before sound returns to a room.</div>
+          <div class="piece-meta">
+            <div class="meta-item">
+              <span class="meta-label">Medium</span>
+              <span class="meta-value" contenteditable="false">Oil / Gold Leaf</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Size</span>
+              <span class="meta-value" contenteditable="false">80 × 100 cm</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Year</span>
+              <span class="meta-value" contenteditable="false">2024</span>
+            </div>
+          </div>
+          <button class="piece-btn" onclick="inquire(this)">Inquire About This Piece</button>
+        </div>
+        <div class="piece-controls">
+          <select class="ctrl-select" onchange="changeBadge(this)">
+            <option value="av">Available</option>
+            <option value="sold">Sold</option>
+            <option value="arch">Archived</option>
+          </select>
+          <input class="ctrl-input" placeholder="Price (optional)" type="text">
+          <button class="ctrl-del" onclick="deletePiece(this)">Remove</button>
+        </div>
+      </div>
+
+      <!-- PIECE 2 -->
+      <div class="piece rv d2">
+        <div class="piece-img" onclick="triggerUpload(this)">
+          <div class="piece-empty">
+            <div class="piece-empty-sym">✦</div>
+            <div class="piece-empty-txt">Upload Artwork</div>
+          </div>
+          <div class="upload-ov">
+            <div class="u-icon">🖼</div>
+            <div class="u-text">Click to replace image</div>
+          </div>
+          <input type="file" accept="image/*" style="display:none" onchange="loadImg(this)">
+        </div>
+        <div class="piece-info">
+          <div class="piece-top">
+            <span class="piece-id">K77 — 002</span>
+            <span class="badge badge-sold">Sold</span>
+          </div>
+          <div class="piece-title" contenteditable="false">Threshold</div>
+          <div class="piece-desc" contenteditable="false">Acrylic and raw pigment on canvas. The precise moment of crossing — rendered in ochre and shadow.</div>
+          <div class="piece-meta">
+            <div class="meta-item">
+              <span class="meta-label">Medium</span>
+              <span class="meta-value" contenteditable="false">Acrylic / Pigment</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Size</span>
+              <span class="meta-value" contenteditable="false">60 × 90 cm</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Year</span>
+              <span class="meta-value" contenteditable="false">2023</span>
+            </div>
+          </div>
+          <button class="piece-btn" onclick="inquire(this)">Inquire About This Piece</button>
+        </div>
+        <div class="piece-controls">
+          <select class="ctrl-select" onchange="changeBadge(this)">
+            <option value="av">Available</option>
+            <option value="sold" selected>Sold</option>
+            <option value="arch">Archived</option>
+          </select>
+          <input class="ctrl-input" placeholder="Price (optional)" type="text">
+          <button class="ctrl-del" onclick="deletePiece(this)">Remove</button>
+        </div>
+      </div>
+
+      <!-- PIECE 3 -->
+      <div class="piece rv d3">
+        <div class="piece-img" onclick="triggerUpload(this)">
+          <div class="piece-empty">
+            <div class="piece-empty-sym">✦</div>
+            <div class="piece-empty-txt">Upload Artwork</div>
+          </div>
+          <div class="upload-ov">
+            <div class="u-icon">🖼</div>
+            <div class="u-text">Click to replace image</div>
+          </div>
+          <input type="file" accept="image/*" style="display:none" onchange="loadImg(this)">
+        </div>
+        <div class="piece-info">
+          <div class="piece-top">
+            <span class="piece-id">K77 — 003</span>
+            <span class="badge badge-av">Available</span>
+          </div>
+          <div class="piece-title" contenteditable="false">Amber Hour</div>
+          <div class="piece-desc" contenteditable="false">Mixed media on board. Late light pressed into pigment — time as a physical material.</div>
+          <div class="piece-meta">
+            <div class="meta-item">
+              <span class="meta-label">Medium</span>
+              <span class="meta-value" contenteditable="false">Mixed Media</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Size</span>
+              <span class="meta-value" contenteditable="false">50 × 70 cm</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Year</span>
+              <span class="meta-value" contenteditable="false">2023</span>
+            </div>
+          </div>
+          <button class="piece-btn" onclick="inquire(this)">Inquire About This Piece</button>
+        </div>
+        <div class="piece-controls">
+          <select class="ctrl-select" onchange="changeBadge(this)">
+            <option value="av">Available</option>
+            <option value="sold" selected>Sold</option>
+            <option value="arch">Archived</option>
+          </select>
+          <input class="ctrl-input" placeholder="Price (optional)" type="text">
+          <button class="ctrl-del" onclick="deletePiece(this)">Remove</button>
+        </div>
+      </div>
+
+      <!-- PIECE 3 -->
+      <div class="piece rv d3">
+        <div class="piece-img" onclick="triggerUpload(this)">
+          <div class="piece-empty">
+            <div class="piece-empty-sym">✦</div>
+            <div class="piece-empty-txt">Upload Artwork</div>
+          </div>
+          <div class="upload-ov">
+            <div class="u-icon">🖼</div>
+            <div class="u-text">Click to replace image</div>
+          </div>
+          <input type="file" accept="image/*" style="display:none" onchange="loadImg(this)">
+        </div>
+        <div class="piece-info">
+          <div class="piece-top">
+            <span class="piece-id">K77 — 003</span>
+            <span class="badge badge-av">Available</span>
+          </div>
+          <div class="piece-title" contenteditable="false">Amber Hour</div>
+          <div class="piece-desc" contenteditable="false">Mixed media on board. Late light pressed into pigment — time as a physical material.</div>
+          <div class="piece-meta">
+            <div class="meta-item">
+              <span class="meta-label">Medium</span>
+              <span class="meta-value" contenteditable="false">Mixed Media</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Size</span>
+              <span class="meta-value" contenteditable="false">50 × 70 cm</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Year</span>
+              <span class="meta-value" contenteditable="false">2024</span>
+            </div>
+          </div>
+          <button class="piece-btn" onclick="inquire(this)">Inquire About This Piece</button>
+        </div>
+        <div class="piece-controls">
+          <select class="ctrl-select" onchange="changeBadge(this)">
+            <option value="av" selected>Available</option>
+            <option value="sold">Sold</option>
+            <option value="arch">Archived</option>
+          </select>
+          <input class="ctrl-input" placeholder="Price (optional)" type="text">
+          <button class="ctrl-del" onclick="deletePiece(this)">Remove</button>
+        </div>
+      </div>
+
+    </div><!-- /pieces -->
+
+    <div class="add-wrap">
+      <button class="add-btn" id="add-piece-btn">+ Add New Piece</button>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience" class="dark">
+  <div class="wrap">
+    <div class="rv center">
+      <span class="label">The Studio</span>
+      <h2 class="title">The <em>Living Frame</em><br>Experience</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card rv d1">
+        <div class="exp-num">01</div>
+        <div class="exp-title" contenteditable="false">First Inquiry</div>
+        <div class="exp-text" contenteditable="false">Every relationship begins with a conversation. Reach out via the contact below and expect a personal response within 48 hours. No forms. No automation.</div>
+      </div>
+      <div class="exp-card rv d2">
+        <div class="exp-num">02</div>
+        <div class="exp-title" contenteditable="false">Studio Viewing</div>
+        <div class="exp-text" contenteditable="false">Serious collectors are invited to an in-person or virtual studio viewing. See the work in full context, in real light, before any commitment.</div>
+      </div>
+      <div class="exp-card rv d3">
+        <div class="exp-num">03</div>
+        <div class="exp-title" contenteditable="false">Acquisition</div>
+        <div class="exp-text" contenteditable="false">Each work ships with a signed certificate, provenance documentation, and white-glove delivery. The piece arrives as it left the studio — protected and complete.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── PACKAGE ── -->
+<section id="package">
+  <div class="wrap">
+    <div class="rv">
+      <span class="label">What's Included</span>
+      <h2 class="title">Every Work,<br><em>Complete</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="pkg-grid">
+      <ul class="pkg-list">
+        <li class="rv d1">
+          <div class="pkg-icon">I</div>
+          <div>
+            <div class="pkg-item-title" contenteditable="false">Signed Certificate</div>
+            <div class="pkg-item-text" contenteditable="false">Each work includes a hand-signed certificate of authenticity with edition number and date of completion.</div>
+          </div>
+        </li>
+        <li class="rv d2">
+          <div class="pkg-icon">II</div>
+          <div>
+            <div class="pkg-item-title" contenteditable="false">Provenance Documentation</div>
+            <div class="pkg-item-text" contenteditable="false">Full written record of the work's creation, materials, and ownership history — essential for resale and insurance.</div>
+          </div>
+        </li>
+        <li class="rv d3">
+          <div class="pkg-icon">III</div>
+          <div>
+            <div class="pkg-item-title" contenteditable="false">White-Glove Delivery</div>
+            <div class="pkg-item-text" contenteditable="false">Specialist art handling and secure crating for all works. Delivery coordinated personally to ensure safe arrival.</div>
+          </div>
+        </li>
+        <li class="rv d4">
+          <div class="pkg-icon">IV</div>
+          <div>
+            <div class="pkg-item-title" contenteditable="false">Collector Aftercare</div>
+            <div class="pkg-item-text" contenteditable="false">Ongoing access to the artist for questions on display, care, and future resale. A relationship that extends beyond the sale.</div>
+          </div>
+        </li>
+        <li class="rv d5">
+          <div class="pkg-icon">V</div>
+          <div>
+            <div class="pkg-item-title" contenteditable="false">Registry Listing</div>
+            <div class="pkg-item-text" contenteditable="false">All acquired works are registered in the K77 collector's archive — a permanent record of the work's journey.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="pkg-card rv d3">
+        <span class="pkg-card-label">Studio Mark</span>
+        <div class="pkg-logo">K77</div>
+        <div class="pkg-sub">Living Frame Studio</div>
+        <div class="pkg-divider"></div>
+        <div class="pkg-items">
+          <div class="pkg-item" contenteditable="false">Signed & Numbered</div>
+          <div class="pkg-item" contenteditable="false">Certificate of Authenticity</div>
+          <div class="pkg-item" contenteditable="false">Provenance Record</div>
+          <div class="pkg-item" contenteditable="false">White-Glove Shipping</div>
+          <div class="pkg-item" contenteditable="false">Collector Registry</div>
+          <div class="pkg-item" contenteditable="false">Artist Aftercare</div>
+        </div>
+        <div class="pkg-sig">K77</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── ARCHIVE ── -->
+<section id="archive" class="dark">
+  <div class="wrap">
+    <div class="rv center">
+      <span class="label">Past Works</span>
+      <h2 class="title">The <em>Archive</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="archive-box rv">
+      <div class="archive-title" contenteditable="false">Works That Have Found Their Homes</div>
+      <div class="archive-text" contenteditable="false">The archive is a record of completed journeys — pieces now living in private collections around the world. Though no longer available for acquisition, archived works remain part of the K77 provenance system and may be viewed by appointment.</div>
+      <div class="archive-badge">✦ &nbsp; Archive Viewings Available by Appointment</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="wrap center">
+    <div class="rv">
+      <span class="label">Get in Touch</span>
+      <h2 class="title">Begin the<br><em>Conversation</em></h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="contact-links rv d1">
+      <a class="contact-link" href="mailto:studio@k77.art">
+        <div class="contact-icon">✉</div>
+        <span class="contact-label">Email</span>
+      </a>
+      <a class="contact-link" href="https://instagram.com/k77.art" target="_blank">
+        <div class="contact-icon">◈</div>
+        <span class="contact-label">Instagram</span>
+      </a>
+      <a class="contact-link" href="#">
+        <div class="contact-icon">◎</div>
+        <span class="contact-label">WhatsApp</span>
+      </a>
+    </div>
+
+    <div class="registry-box rv d2">
+      <p contenteditable="false">To join the collector's registry and receive first access to new works before public release, send an email with the subject line <strong style="color:var(--gold);">"Registry"</strong> — you'll be added to the private list.</p>
+      <a class="btn-gold" href="mailto:studio@k77.art?subject=Registry">Join the Registry</a>
+    </div>
+
+    <p class="rv d3" style="font-size:0.6rem;letter-spacing:0.22em;color:rgba(255,255,255,0.2);text-transform:uppercase;" contenteditable="false">Commission inquiries welcomed &nbsp;·&nbsp; Response within 48 hours</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">K77</div>
+  <div class="footer-sig">Living Frame</div>
+  <div class="footer-copy" contenteditable="false">© 2024 K77 Art Studio · All Rights Reserved</div>
+</footer>
+
+<!-- ── SECRET TAP + EDIT TOGGLE ── -->
+<div id="secret-tap"></div>
+<button id="edit-toggle" onclick="toggleEdit()">Exit Edit Mode</button>
+
+<!-- ── HIDDEN FILE INPUT ── -->
+<input type="file" id="global-file-input" accept="image/*" style="display:none">
+<script>
+/* ══════════════════════════════════════════════
+   ENTRANCE CANVAS — particle constellation
+══════════════════════════════════════════════ */
+(function(){
+  const canvas = document.getElementById('ent-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], mouse = {x:null,y:null};
+  const N = 90, LINK = 130;
+
+  function resize(){
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function Particle(){
+    this.x = Math.random()*W;
+    this.y = Math.random()*H;
+    this.vx = (Math.random()-0.5)*0.38;
+    this.vy = (Math.random()-0.5)*0.38;
+    this.r = Math.random()*1.4+0.3;
+    this.gold = Math.random() > 0.72;
+  }
+  Particle.prototype.update = function(){
+    this.x += this.vx; this.y += this.vy;
+    if(this.x<0||this.x>W) this.vx*=-1;
+    if(this.y<0||this.y>H) this.vy*=-1;
+  };
+
+  for(let i=0;i<N;i++) particles.push(new Particle());
+
+  canvas.addEventListener('mousemove', e=>{mouse.x=e.clientX;mouse.y=e.clientY;});
+  canvas.addEventListener('mouseleave',()=>{mouse.x=null;mouse.y=null;});
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    particles.forEach(p=>p.update());
+    // links
+    for(let i=0;i<particles.length;i++){
+      for(let j=i+1;j<particles.length;j++){
+        const a=particles[i], b=particles[j];
+        const d=Math.hypot(a.x-b.x,a.y-b.y);
+        if(d<LINK){
+          ctx.beginPath();
+          ctx.strokeStyle=`rgba(201,168,76,${0.18*(1-d/LINK)})`;
+          ctx.lineWidth=0.5;
+          ctx.moveTo(a.x,a.y);
+          ctx.lineTo(b.x,b.y);
+          ctx.stroke();
+        }
+      }
+      // mouse repel
+      if(mouse.x!==null){
+        const md=Math.hypot(particles[i].x-mouse.x,particles[i].y-mouse.y);
+        if(md<80){
+          particles[i].vx+=(particles[i].x-mouse.x)/md*0.04;
+          particles[i].vy+=(particles[i].y-mouse.y)/md*0.04;
+        }
+      }
+    }
+    // dots
+    particles.forEach(p=>{
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle = p.gold ? 'rgba(201,168,76,0.7)' : 'rgba(255,255,255,0.28)';
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ══════════════════════════════════════════════
+   ENTRANCE BUTTON
+══════════════════════════════════════════════ */
+document.getElementById('ent-enter').addEventListener('click', function(){
+  document.getElementById('entrance').classList.add('gone');
+  setTimeout(()=>document.getElementById('entrance').remove(),1400);
+});
+
+/* ══════════════════════════════════════════════
+   SECRET TAP — edit mode unlock
+══════════════════════════════════════════════ */
+const PASS = 'k77studio';
+let tapCount = 0, tapTimer;
+document.getElementById('secret-tap').addEventListener('click', function(){
+  tapCount++;
+  clearTimeout(tapTimer);
+  tapTimer = setTimeout(()=>tapCount=0, 1800);
+  if(tapCount >= 5){
+    tapCount = 0;
+    document.getElementById('pw-modal').classList.add('show');
+    document.getElementById('pw-input').focus();
+  }
+});
+
+document.getElementById('pw-go').addEventListener('click', checkPw);
+document.getElementById('pw-input').addEventListener('keydown', e=>{ if(e.key==='Enter') checkPw(); });
+document.getElementById('pw-cancel').addEventListener('click', ()=>{
+  document.getElementById('pw-modal').classList.remove('show');
+  document.getElementById('pw-err').style.display='none';
+  document.getElementById('pw-input').value='';
+});
+
+function checkPw(){
+  const val = document.getElementById('pw-input').value.trim();
+  if(val === PASS){
+    document.getElementById('pw-modal').classList.remove('show');
+    document.getElementById('pw-input').value='';
+    document.getElementById('pw-err').style.display='none';
+    enableEdit();
+  } else {
+    document.getElementById('pw-err').style.display='block';
+    document.getElementById('pw-input').value='';
+    document.getElementById('pw-input').focus();
+  }
+}
+
+/* ══════════════════════════════════════════════
+   EDIT MODE
+══════════════════════════════════════════════ */
+function enableEdit(){
+  document.body.classList.add('editing');
+  document.getElementById('edit-toggle').style.display='block';
+  // make all contenteditable elements live
+  document.querySelectorAll('[contenteditable]').forEach(el=>{
+    el.contentEditable = 'true';
+  });
+}
+
+function toggleEdit(){
+  document.body.classList.remove('editing');
+  document.getElementById('edit-toggle').style.display='none';
+  document.querySelectorAll('[contenteditable]').forEach(el=>{
+    el.contentEditable = 'false';
+  });
+}
+
+/* ══════════════════════════════════════════════
+   IMAGE UPLOAD
+══════════════════════════════════════════════ */
+function triggerUpload(imgDiv){
+  if(!document.body.classList.contains('editing')) return;
+  const inp = imgDiv.querySelector('input[type=file]');
+  if(inp) inp.click();
+}
+
+function loadImg(input){
+  const file = input.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e){
+    const imgDiv = input.closest('.piece-img');
+    // remove empty placeholder
+    const empty = imgDiv.querySelector('.piece-empty');
+    if(empty) empty.remove();
+    // remove existing img if any
+    const existing = imgDiv.querySelector('img');
+    if(existing) existing.remove();
+    // create new img
+    const img = document.createElement('img');
+    img.src = e.target.result;
+    imgDiv.insertBefore(img, imgDiv.querySelector('.upload-ov'));
+  };
+  reader.readAsDataURL(file);
+}
+
+/* ══════════════════════════════════════════════
+   BADGE STATUS
+══════════════════════════════════════════════ */
+function changeBadge(select){
+  const piece = select.closest('.piece');
+  const badge = piece.querySelector('.badge');
+  badge.className = 'badge';
+  if(select.value==='av'){ badge.classList.add('badge-av'); badge.textContent='Available'; }
+  else if(select.value==='sold'){ badge.classList.add('badge-sold'); badge.textContent='Sold'; }
+  else { badge.classList.add('badge-arch'); badge.textContent='Archived'; }
+}
+
+/* ══════════════════════════════════════════════
+   DELETE PIECE
+══════════════════════════════════════════════ */
+function deletePiece(btn){
+  if(!confirm('Remove this piece from the gallery?')) return;
+  const piece = btn.closest('.piece');
+  piece.style.transition='opacity 0.4s,transform 0.4s';
+  piece.style.opacity='0';
+  piece.style.transform='scale(0.95)';
+  setTimeout(()=>piece.remove(), 420);
+}
+
+/* ══════════════════════════════════════════════
+   ADD PIECE
+══════════════════════════════════════════════ */
+let pieceCounter = 4;
+document.getElementById('add-piece-btn').addEventListener('click', function(){
+  const id = String(pieceCounter).padStart(3,'0');
+  pieceCounter++;
+  const div = document.createElement('div');
+  div.className='piece';
+  div.innerHTML=`
+    <div class="piece-img" onclick="triggerUpload(this)">
+      <div class="piece-empty">
+        <div class="piece-empty-sym">✦</div>
+        <div class="piece-empty-txt">Upload Artwork</div>
+      </div>
+      <div class="upload-ov">
+        <div class="u-icon">🖼</div>
+        <div class="u-text">Click to replace image</div>
+      </div>
+      <input type="file" accept="image/*" style="display:none" onchange="loadImg(this)">
+    </div>
+    <div class="piece-info">
+      <div class="piece-top">
+        <span class="piece-id">K77 — ${id}</span>
+        <span class="badge badge-av">Available</span>
+      </div>
+      <div class="piece-title" contenteditable="true">Untitled Work</div>
+      <div class="piece-desc" contenteditable="true">Click to add a description of this piece.</div>
+      <div class="piece-meta">
+        <div class="meta-item">
+          <span class="meta-label">Medium</span>
+          <span class="meta-value" contenteditable="true">Medium</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Size</span>
+          <span class="meta-value" contenteditable="true">Size</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Year</span>
+          <span class="meta-value" contenteditable="true">2024</span>
+        </div>
+      </div>
+      <button class="piece-btn" onclick="inquire(this)">Inquire About This Piece</button>
+    </div>
+    <div class="piece-controls" style="display:flex;">
+      <select class="ctrl-select" onchange="changeBadge(this)">
+        <option value="av" selected>Available</option>
+        <option value="sold">Sold</option>
+        <option value="arch">Archived</option>
+      </select>
+      <input class="ctrl-input" placeholder="Price (optional)" type="text">
+      <button class="ctrl-del" onclick="deletePiece(this)">Remove</button>
+    </div>
+  `;
+  document.getElementById('pieces-grid').appendChild(div);
+  requestAnimationFrame(()=>{ div.style.opacity='0'; div.style.transform='translateY(20px)'; });
+  requestAnimationFrame(()=>{
+    div.style.transition='opacity 0.5s,transform 0.5s';
+    div.style.opacity='1';
+    div.style.transform='translateY(0)';
+  
+  });
+});
+  
+/* ══════════════════════════════════════════════
+   INQUIRE BUTTON
+══════════════════════════════════════════════ */
+function inquire(btn){
+  const piece = btn.closest('.piece');
+  const title = piece.querySelector('.piece-title').textContent.trim();
+  const id = piece.querySelector('.piece-id').textContent.trim();
+  window.location.href=`mailto:studio@k77.art?subject=Inquiry: ${encodeURIComponent(title)} (${encodeURIComponent(id)})`;
+}
+
+/* ══════════════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════════════ */
+const revObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('on'); });
+},{threshold:0.1});
+document.querySelectorAll('.rv').forEach(el=>revObserver.observe(el));
+</script>
+</body>
+</html>
+  
