@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collector Assurance — K77 Art Studio</title>
+<meta name="description" content="How resale works for K77 Art Studio editions — provenance, eligibility, and studio-facilitated resale, explained.">
+<meta property="og:title" content="Collector Assurance — K77 Art Studio">
+<meta property="og:description" content="An artwork that outlives its first owner. How resale, provenance, and value work across every K77 edition.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --panel:#131211;
+    --line:#2a2620;
+    --gold:#c9a84c;
+    --gold-dim:#7a6635;
+    --ink:#f2efe9;
+    --ink-muted:#948d7d;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:var(--gold); color:var(--black); }
+
+  .wrap{ max-width:760px; margin:0 auto; padding:0 28px; }
+
+  header.hero{
+    padding:120px 0 90px;
+    border-bottom:1px solid var(--line);
+    position:relative;
+  }
+  .eyebrow{
+    font-family:'Inter', sans-serif;
+    font-size:11px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:28px;
+  }
+  h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:clamp(38px, 6vw, 62px);
+    line-height:1.08;
+    letter-spacing:0.005em;
+    max-width:11ch;
+  }
+  h1 em{ font-style:italic; color:var(--gold); font-weight:400; }
+  .lede{
+    margin-top:28px;
+    max-width:52ch;
+    font-size:17px;
+    color:#c9c3b4;
+    font-weight:300;
+  }
+
+  section{ padding:80px 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+
+  .num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:13px;
+    letter-spacing:0.24em;
+    color:var(--gold-dim);
+    text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  h2{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:clamp(26px, 4vw, 34px);
+    margin-bottom:24px;
+    max-width:20ch;
+  }
+  p{ color:#c9c3b4; font-size:15.5px; max-width:58ch; margin-bottom:16px; }
+  p:last-child{ margin-bottom:0; }
+  .note{
+    font-size:13.5px;
+    color:var(--ink-muted);
+    font-style:italic;
+    font-family:'Cormorant Garamond', serif;
+    margin-top:20px;
+    border-left:2px solid var(--gold-dim);
+    padding-left:16px;
+  }
+
+  /* the chain — provenance ledger, the signature element */
+  .chain{ margin-top:44px; position:relative; padding-left:36px; }
+  .chain::before{
+    content:'';
+    position:absolute;
+    left:6px; top:8px; bottom:8px;
+    width:1px;
+    background:linear-gradient(var(--gold-dim), var(--line));
+  }
+  .link{ position:relative; padding-bottom:40px; }
+  .link:last-child{ padding-bottom:0; }
+  .link::before{
+    content:'';
+    position:absolute;
+    left:-36px; top:4px;
+    width:11px; height:11px;
+    border-radius:50%;
+    background:var(--black);
+    border:1px solid var(--gold);
+  }
+  .link h3{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:19px;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .link p{ font-size:14.5px; }
+
+  .figures{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    margin-top:36px;
+    border:1px solid var(--line);
+  }
+  .figure{ background:var(--panel); padding:32px 28px; }
+  .figure .val{
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    color:var(--gold);
+    font-weight:500;
+  }
+  .figure .lbl{
+    font-size:12px;
+    letter-spacing:0.08em;
+    color:var(--ink-muted);
+    text-transform:uppercase;
+    margin-top:8px;
+  }
+
+  footer{
+    padding:80px 0 100px;
+    text-align:center;
+  }
+  footer .sign{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:19px;
+    color:var(--gold);
+    margin-top:8px;
+  }
+  footer .brand{
+    font-size:11px;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--ink-muted);
+    margin-top:32px;
+  }
+  .contact-link{
+    display:inline-block;
+    margin-top:28px;
+    padding:14px 32px;
+    border:1px solid var(--gold-dim);
+    color:var(--gold);
+    text-decoration:none;
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    transition:border-color 0.2s ease, color 0.2s ease;
+  }
+  .contact-link:hover{
+    border-color:var(--gold);
+    color:var(--ink);
+  }
+
+  @media(max-width:600px){
+    header.hero{ padding:80px 0 60px; }
+    section{ padding:56px 0; }
+    .figures{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">K77 Art Studio · Collector Assurance</div>
+    <h1>An artwork that <em>outlives</em> its first owner.</h1>
+    <p class="lede">Every K77 piece is anchored to the K77 Chain — a living provenance and ownership record that doesn't end at your wall. This is not a certificate you file away. It's a studio staying with the work, and with you, long after the sale.</p>
+  </header>
+
+  <section id="how">
+    <div class="num">I.</div>
+    <h2>How resale works</h2>
+    <p>K77 does not simply sell art and disappear. When a collector is ready to let a piece move on, the studio facilitates the transition end to end — sourcing the next collector, verifying the work, and updating the piece's permanent record.</p>
+
+    <div class="chain">
+      <div class="link">
+        <h3>Eligibility</h3>
+        <p>A piece becomes eligible for studio-facilitated resale after it has been held for two years. This applies to every K77 edition without exception — enough time for the piece's story, and the studio's, to deepen before it changes hands.</p>
+        <p>Resale is never required. Two years marks when it becomes possible, not when it's expected — many collectors keep their pieces for life, and the piece's provenance record grows richer the longer it stays with one owner.</p>
+      </div>
+      <div class="link">
+        <h3>Notify the studio</h3>
+        <p>The collector reaches out to K77 directly. The piece's Collector ID and provenance history are pulled and verified.</p>
+      </div>
+      <div class="link">
+        <h3>Valuation</h3>
+        <p>K77 assesses current fair value — based on the original price, time held, collector demand, and the piece's condition — and proposes an asking price to the seller.</p>
+      </div>
+      <div class="link">
+        <h3>Sourcing the buyer</h3>
+        <p>K77 draws on its collector waitlist and network to find the next owner, so the seller never has to find a buyer alone. The studio actively sources for an initial window of three months.</p>
+        <p>If no buyer has been found within that window, K77 and the seller revisit together — either adjusting the asking price, or keeping the piece listed on the waitlist with no forced timeline. The choice stays with the seller.</p>
+      </div>
+      <div class="link">
+        <h3>Transfer &amp; record</h3>
+        <p>On sale, the K77 Chain provenance registry is updated, the Collector ID transfers to the new owner, and the seller is paid out.</p>
+      </div>
+      <div class="link">
+        <h3>Transfer outside a sale</h3>
+        <p>A piece can also change hands as a gift or inheritance, without going through resale. In these cases, simply notify the studio so the Collector ID and provenance record can be updated to reflect the new owner.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="damage">
+    <div class="num">II.</div>
+    <h2>Delivery &amp; damage guarantee</h2>
+    <p>Every K77 piece is covered by a one-time reproduction guarantee for two years from the date of delivery. If the piece is damaged or broken during this period — whether in transit or afterward, in the collector's care — K77 will reproduce the piece once at no cost for the artwork itself. Delivery of the reproduction is the collector's responsibility.</p>
+    <p class="note">This is a separate two-year period from resale eligibility below — one covers the piece's condition, the other covers when it can change hands. Both begin at delivery, but they run independently.</p>
+  </section>
+
+  <section id="value">
+    <div class="num">III.</div>
+    <h2>On value, honestly</h2>
+    <p>K77 does not promise a fixed return — no serious collector's market does. What K77 offers instead is a studio actively managing scarcity, provenance, and demand on the collector's behalf, so value has room to grow rather than being left to chance.</p>
+    <p>As a general guide, and market conditions permitting, pieces resold after the two-year eligibility mark are expected to trend toward 10–20% above their original price. This is a guide, not a guarantee, and will sharpen as more of the collection changes hands.</p>
+
+    <div class="figures">
+      <div class="figure">
+        <div class="val">2 yrs</div>
+        <div class="lbl">Minimum hold before resale — every edition</div>
+      </div>
+      <div class="figure">
+        <div class="val">15%</div>
+        <div class="lbl">Studio facilitation commission</div>
+      </div>
+    </div>
+    <p class="note">The 15% commission is deducted from the resale price at the point of sale, and covers authentication, buyer sourcing, and the provenance transfer — the collector arranges nothing themselves.</p>
+  </section>
+
+  <section id="why">
+    <div class="num">IV.</div>
+    <h2>Why this, and not a certificate on paper</h2>
+    <p>A paper certificate can be lost, forged, or forgotten. The K77 Chain is a living record — every piece's history lives digitally, tied to a Collector ID that updates with each transfer, viewable at any time.</p>
+    <p>Where a digital token trades speculatively and can be copied endlessly, a K77 piece is one physical object with one verified history. The scarcity is real. The record is permanent. The studio does not disappear after the sale.</p>
+  </section>
+
+  <footer>
+    <div class="eyebrow" style="margin-bottom:0;">Questions on a specific piece</div>
+    <p style="margin-top:10px;">Reach the studio directly to begin a resale conversation or verify a piece's provenance.</p>
+    <a class="contact-link" href="https://wa.me/2349014501664" target="_blank" rel="noopener">Message on WhatsApp</a>
+    <div class="sign">yours, kindred spirit</div>
+    <div class="brand">K77 Art Studio</div>
+  </footer>
+
+</div>
+
+</body>
+  </html>
